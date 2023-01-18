@@ -1,0 +1,25 @@
+body {
+    min-height: 100vh;
+}
+
+#calculator {
+    border: 5px solid black;
+}
+
+.buttons {
+    
+    display: flex;
+}
+
+.numbers {
+    border: 5px solid black;
+}
+
+.operators {
+    border: 5px solid black;
+}
+
+.screen {
+    text-align: right;
+    height: 20px;
+}
