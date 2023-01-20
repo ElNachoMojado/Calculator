@@ -11,7 +11,7 @@ function equal () {
             counter++;
             onlyOp[onlyOp.length] = display[i];
         } else if (display[i] === '=') {
-            onlyNums.push(parseInt(num));
+            onlyNums.push(Number(num));
             total = onlyNums[0];
             for (i = 1; i < onlyNums.length; i++) {
                 if (onlyOp[(i-1)] === '+') {
@@ -34,7 +34,7 @@ function equal () {
             break;
         } else {
             if (counter > 0) {
-                onlyNums[onlyNums.length] = parseInt(num);
+                onlyNums[onlyNums.length] = Number(num);
                 num = 0;
                 counter = 0;
             }
@@ -52,12 +52,19 @@ function equal () {
 const screen = document.querySelector('.screen');
 
 //Inputs clicked numbers on screen
+const dot = document.querySelector('.dot');
 const numberBtns = document.querySelector('.numberBtns');
 const display = [];
 numberBtns.addEventListener('click', event => {
     if (event.target.nodeName === "BUTTON") {
-        display.push(event.target.textContent);
-        screen.textContent = display.join('');
+        if (event.target.textContent === '.') {
+            display.push(event.target.textContent);
+            screen.textContent = display.join('');
+            dot.disabled = true;
+        } else {
+            display.push(event.target.textContent);
+            screen.textContent = display.join('');
+        }
     }
 });
 
@@ -65,7 +72,8 @@ numberBtns.addEventListener('click', event => {
 const operBtns = document.querySelector('.operators');
 operBtns.addEventListener('click', event => {
     if (event.target.nodeName === 'BUTTON') {
-        if (event.target.textContent === 'BACK') {
+        dot.disabled = false;
+        if (event.target.textContent === '←') {
             display.pop();
             screen.textContent = display.join('');
         } else if (event.target.textContent === 'Clear') {
