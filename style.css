@@ -5,7 +5,6 @@ body {
     display: flex;
     flex-direction: column;
     
-    
 }
 
 .container {
@@ -15,14 +14,35 @@ body {
     align-items: center;
 }
 
-#calculator {
-    border-radius: 5px;
-    background-color: #9dbb96;
+.DS {
+    position: relative;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    min-width: 350px;
-    padding: 10px;
+}
+
+.upScrn {
+    background-color: white;
+    border-radius: 3px;
+    position: absolute;
+    top: 12.5%;
+    left: 22.45%;
+    height: 215px;
+    width: 358px;
+    background-image: url('images/ninbackground.jpg');
+    background-size: 350px;
+}
+
+.btmScrn {
+    background-color: white;
+    border-radius: 3px;
+    position: absolute;
+    top: 55%;
+    left: 27.9%;
+    height: 216px;
+    width: 288px;
+    background-image: url('images/btmback.gif');
+    background-size: 280px;
 }
 
 .screen {
@@ -32,7 +52,7 @@ body {
     flex: 1;
     justify-content: end;
     margin: 10px;
-    width: 220px;
+    width: 325px;
     min-height: 50px;
     padding: 0 5px;
     text-align: right;
@@ -53,12 +73,11 @@ body {
     flex-wrap: wrap-reverse;
     align-items: center;
     justify-content: space-evenly;
-    width: 95px;
+    width: 157px;
 }
 
 .zero {
     display: flex;
-    justify-content: center;
 }
 
 .operators {
@@ -66,8 +85,8 @@ body {
     flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
-    width: 55px;
-    
+    width: 108px;
+    justify-content: center;
 }
 
 .removers {
@@ -81,20 +100,21 @@ button {
     align-items: center;
     border: 0;
     border-radius: 7px;
-    font-size: 20px;
+    font-size: 38px;
     padding: 0 5px;
     margin: 5px;
+    opacity: 0.7;
 }
 
 .removers button {
-    font-size: 15px;
+    font-size: 37px;
     padding: 0 5px;
 }
 
 .mathOps button {
     border-radius: 7px;
-    font-size: 15px;
-    padding: 0 5px;
+    font-size: 30px;
+    padding: 0 15px;
 }
 
 .mathOps {
@@ -116,45 +136,11 @@ button {
 }
 
 .equal button{
-    padding: 9px 19px;
-}
-
-p {
-    margin: 0;
-    font-weight: bold;
-    font-family: sans-serif;
-    font-size: 25px;
-    color: black;
-}
-
-.DS {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding: 1px 45px;
+    background-color:aquamarine;
 }
 
 img {
-    height: 460px;
+    height: 650px;
     width: auto;
-}
-
-.upScrn {
-    background-color: white;
-    border-radius: 3px;
-    position: absolute;
-    top: 12.5%;
-    left: 22.45%;
-    height: 152px;
-    width: 253.3px;
-}
-
-.btmScrn {
-    background-color: white;
-    border-radius: 3px;
-    position: absolute;
-    top: 55%;
-    left: 27.9%;
-    height: 152px;
-    width: 204px;
 }
