@@ -46,6 +46,9 @@ function equal () {
         display.shift();
     }
     total = Math.round(total * 10000) / 10000;
+    if (isNaN(total)) {
+        total = 'ERROR';
+    }
     return total;
 }
 
@@ -76,7 +79,7 @@ operBtns.addEventListener('click', event => {
         if (event.target.textContent === '←') {
             display.pop();
             screen.textContent = display.join('');
-        } else if (event.target.textContent === 'Clear') {
+        } else if (event.target.textContent === 'AC') {
             for (i = 0; display.length > 0;) {
                 display.shift();
             }

@@ -16,21 +16,27 @@ body {
 }
 
 #calculator {
-    border: 5px solid #253570;
-    /*background-color: #253570;*/
+    border-radius: 5px;
+    background-color: #9dbb96;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    min-width: 350px;
+    padding: 10px;
 }
 
 .screen {
+    border: 2px solid black;
+    border-radius: 0.5rem;
+    display: flex;
+    flex: 1;
+    justify-content: end;
     margin: 10px;
-    width: 230px;
+    width: 220px;
+    min-height: 50px;
     padding: 0 5px;
-    height: 35px;
     text-align: right;
-    font-size: 30px;
+    font-size: 40px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-weight: bold;
     background-color: #D5D5C8;
@@ -46,7 +52,8 @@ body {
     flex-direction: row;
     flex-wrap: wrap-reverse;
     align-items: center;
-    width: 105px;
+    justify-content: space-evenly;
+    width: 95px;
 }
 
 .zero {
@@ -59,7 +66,7 @@ body {
     flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
-    width: 95px;
+    width: 55px;
     
 }
 
@@ -67,26 +74,27 @@ body {
     display: flex;
 }
 
-.equal {
-    display: flex;
-}
-
 button {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    border: 0;
     border-radius: 7px;
-    font-size: 30px;
+    font-size: 20px;
     padding: 0 5px;
-    margin: 2px;
+    margin: 5px;
 }
 
 .removers button {
-    font-size: 20px;
+    font-size: 15px;
     padding: 0 5px;
 }
 
 .mathOps button {
     border-radius: 7px;
-    font-size: 20px;
-    padding: 0 15px
+    font-size: 15px;
+    padding: 0 5px;
 }
 
 .mathOps {
@@ -104,5 +112,49 @@ button {
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
     justify-content: center;
-    
+    padding: 5px;
+}
+
+.equal button{
+    padding: 9px 19px;
+}
+
+p {
+    margin: 0;
+    font-weight: bold;
+    font-family: sans-serif;
+    font-size: 25px;
+    color: black;
+}
+
+.DS {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    height: 460px;
+    width: auto;
+}
+
+.upScrn {
+    background-color: white;
+    border-radius: 3px;
+    position: absolute;
+    top: 12.5%;
+    left: 22.45%;
+    height: 152px;
+    width: 253.3px;
+}
+
+.btmScrn {
+    background-color: white;
+    border-radius: 3px;
+    position: absolute;
+    top: 55%;
+    left: 27.9%;
+    height: 152px;
+    width: 204px;
 }
