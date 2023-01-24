@@ -10,4 +10,5 @@ Making a calculator was not as easy as I thought it would be. I spent two days t
     <li>Better understanding of arrays</li>
     <li>Patience and perseverance to keep thinking of strategies and get the work done as best as possible</li>
     <li>CSS position</li>
+    <li>Use web developer tools to debug code</li>
   </ul>
